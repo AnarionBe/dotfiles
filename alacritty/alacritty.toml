@@ -1,0 +1,13 @@
+[colors.normal]
+blue = "#00eaff"
+cyan = "#3ddcff"
+
+[colors.primary]
+background = "#0b1220"
+foreground = "#e6f1ff"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[window]
+opacity = 0.85

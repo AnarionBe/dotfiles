@@ -1,0 +1,122 @@
+/* ============================= */
+/* GLOBAL VARIABLES              */
+/* ============================= */
+
+* {
+    bg-main: rgba(11,18,32,0.65);
+    bg-secondary: rgba(16,26,46,0.75);
+    bg-selected: rgba(0,234,255,0.25);
+
+    fg-main: #e6f1ff;
+    fg-muted: #7aa2f7;
+
+    accent: #00eaff;
+
+    border-radius: 14px;
+}
+
+
+/* ============================= */
+/* WINDOW                        */
+/* ============================= */
+
+window {
+    location: center;
+    anchor: center;
+    width: 700px;
+
+    background-color: transparent;
+
+    border: 2px;
+    border-color: @accent;
+    border-radius: @border-radius;
+
+    padding: 0px;
+}
+
+
+/* ============================= */
+/* MAIN CONTAINER (GLASS PANEL) */
+/* ============================= */
+
+mainbox {
+    background-color: @bg-main;
+    border-radius: @border-radius;
+    padding: 20px;
+    spacing: 12px;
+}
+
+
+/* ============================= */
+/* INPUT BAR                     */
+/* ============================= */
+
+inputbar {
+    background-color: @bg-secondary;
+    border-radius: 10px;
+    padding: 10px 14px;
+}
+
+prompt {
+    text-color: @accent;
+    background-color: transparent;
+    margin: 0 8px 0 0;
+}
+
+entry {
+    text-color: @fg-main;
+    background-color: transparent;
+    placeholder: "Search...";
+}
+
+
+/* ============================= */
+/* RESULTS LIST                  */
+/* ============================= */
+
+listview {
+    background-color: transparent;
+    spacing: 6px;
+    margin: 6px 0 0 0;
+}
+
+element {
+    padding: 10px 14px;
+    border-radius: 10px;
+    background-color: transparent;
+}
+
+element-text {
+    text-color: @fg-main;
+    background-color: transparent;
+}
+
+textbox {
+    background-color: transparent;
+}
+
+
+/* ============================= */
+/* SELECTED ITEM                 */
+/* ============================= */
+
+element selected {
+    background-color: @bg-selected;
+    border: 1px;
+    border-color: @accent;
+}
+
+element selected element-text {
+    text-color: @accent;
+}
+
+
+/* ============================= */
+/* ICONS                         */
+/* ============================= */
+
+element-icon {
+    size: 24px;
+    margin: 0 10px 0 0;
+    background-color: transparent;
+}

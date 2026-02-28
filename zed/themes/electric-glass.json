@@ -1,0 +1,118 @@
+{
+  "author": "Anarion",
+  "name": "ElectricGlass",
+  "themes": [
+    {
+      "appearance": "dark",
+      "name": "ElectricGlass",
+      "style": {
+        "background": "#0b1220",
+        "background.appearance": "transparent",
+        "editor.background": "#0b1220",
+        "editor.foreground": "#e6f1ff",
+        "editor.selection": "#00334488",
+        "editor.active_line.background": "#101a2e",
+        "editor.line_number": "#9bb3d3",
+        "editor.invisible": "#4b566880",
+        "editor.indent_guide": "#3ddcff44",
+        "editor.indent_guide_active": "#3ddcff44",
+        "editor.active_wrap_guide": "#3ddcff44",
+        "editor.document_highlight.bracket_background": "#101a2e33",
+        "editor.document_highlight.read_background": "#00eaff22",
+        "editor.document_highlight.write_background": "#00eaff22",
+        "title_bar.background": "#101a2e",
+        "title_bar.inactive_background": "#0b1220",
+        "text": "#e6f1ff",
+        "text.accent": "#00eaff",
+        "text.disabled": "#4b566880",
+        "text.muted": "#9bb3d3",
+        "surface.background": "#101a2e",
+        "sidebar.background": "#101a2e",
+        "sidebar.foreground": "#e6f1ff",
+        "activityBar.background": "#101a2e",
+        "activityBar.foreground": "#00eaff",
+        "status_bar.background": "#101a2e",
+        "status_bar.foreground": "#e6f1ff",
+        "button.background": "#00eaff",
+        "button.foreground": "#0b1220",
+        "badge.background": "#00eaff",
+        "badge.foreground": "#0b1220",
+        "tab.active_background": "#101a2e",
+        "tab.inactive_background": "#0b1220",
+        "tab.active_foreground": "#e6f1ff",
+        "tab.inactive_foreground": "#9bb3d3",
+        "panel.background": "#101a2e",
+        "panel.focused_border": "#00eaff",
+        "panel.indent_guide": "#3ddcff44",
+        "panel.indent_guide_active": "#3ddcff44",
+        "scrollbar.thumb.background": "#4b566880",
+        "scrollbar.thumb.border": "#3ddcff44",
+        "scrollbar.thumb.hover_background": "#00eaff33",
+        "scrollbar.track.background": "#101a2e",
+        "scrollbar.track.border": "#101a2e",
+        "terminal.background": "#0b1220",
+        "terminal.foreground": "#e6f1ff",
+        "terminal.ansi.black": "#101a2e",
+        "terminal.ansi.red": "#ff5c57",
+        "terminal.ansi.green": "#5af78e",
+        "terminal.ansi.yellow": "#f3f99d",
+        "terminal.ansi.blue": "#57c7ff",
+        "terminal.ansi.magenta": "#ff6ac1",
+        "terminal.ansi.cyan": "#9aedfe",
+        "terminal.ansi.white": "#e6f1ff",
+        "terminal.ansi.bright_black": "#4b5668",
+        "terminal.ansi.bright_red": "#ff5c57",
+        "terminal.ansi.bright_green": "#5af78e",
+        "terminal.ansi.bright_yellow": "#f3f99d",
+        "terminal.ansi.bright_blue": "#57c7ff",
+        "terminal.ansi.bright_magenta": "#ff6ac1",
+        "terminal.ansi.bright_cyan": "#9aedfe",
+        "terminal.ansi.bright_white": "#e6f1ff",
+        "syntax": {
+          "comment": {
+            "color": "#4b5668",
+            "font_style": "italic"
+          },
+          "keyword": {
+            "color": "#00eaff",
+            "font_weight": 700
+          },
+          "storage": {
+            "color": "#00eaff",
+            "font_weight": 700
+          },
+          "variable": {
+            "color": "#e6f1ff"
+          },
+          "function": {
+            "color": "#3ddcff"
+          },
+          "string": {
+            "color": "#00eaff"
+          },
+          "constant": {
+            "color": "#3ddcff"
+          },
+          "type": {
+            "color": "#00eaff",
+            "font_weight": 700
+          }
+        },
+        "conflict.background": "#ff5c5733",
+        "conflict.border": "#ff5c57",
+        "modified.background": "#f3f99d33",
+        "modified.border": "#f3f99d",
+        "created.background": "#5af78e33",
+        "created.border": "#5af78e",
+        "deleted.background": "#ff6ac133",
+        "deleted.border": "#ff6ac1",
+        "hint.background": "#57c7ff33",
+        "hint.border": "#57c7ff",
+        "warning.background": "#f3f99d33",
+        "warning.border": "#f3f99d",
+        "error.background": "#ff5c5733",
+        "error.border": "#ff5c57"
+      }
+    }
+  ]
+}

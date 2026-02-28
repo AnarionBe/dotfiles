@@ -1,0 +1,100 @@
+[global]
+
+### POSITION
+origin = top-right
+offset = 24x24
+
+### TAILLE
+width = 360
+height = 140
+notification_limit = 6
+
+### POLICE
+font = JetBrainsMono Nerd Font 10
+
+### GLASS GEOMETRY
+corner_radius = 16
+padding = 16
+horizontal_padding = 16
+frame_width = 2
+
+### COULEURS GLASS PRINCIPALES
+background = "#0b1220b8"
+foreground = "#e6f1ff"
+frame_color = "#00eaff"
+
+### TRANSPARENCE (Hyprland fait le blur)
+transparency = 0
+
+### OMBRE PROFONDE
+separator_height = 0
+
+### TEXTE
+markup = full
+line_height = 6
+ellipsize = middle
+
+### ICONES
+icon_position = left
+min_icon_size = 36
+max_icon_size = 48
+
+### STACKING
+stack_duplicates = true
+hide_duplicate_count = false
+
+### COMPORTEMENT
+follow = none
+indicate_hidden = yes
+show_indicators = no
+
+### TIMEOUT
+idle_threshold = 120
+timeout = 7
+
+### ANIMATION VISUELLE
+shrink = no
+
+### PROGRESS BAR NEON
+progress_bar = true
+progress_bar_height = 8
+progress_bar_frame_width = 0
+progress_bar_corner_radius = 8
+progress_bar_min_width = 180
+progress_bar_max_width = 320
+
+### HISTORIQUE
+history_length = 25
+
+
+#################################################
+# LOW — froid discret
+#################################################
+
+[urgency_low]
+background = "#0b1220b0"
+foreground = "#7aa2f7"
+frame_color = "#22304a"
+timeout = 4
+
+
+#################################################
+# NORMAL — glow bleu principal
+#################################################
+
+[urgency_normal]
+background = "#0b1220b8"
+foreground = "#e6f1ff"
+frame_color = "#00eaff"
+timeout = 7
+
+
+#################################################
+# CRITICAL — glow rouge néon
+#################################################
+
+[urgency_critical]
+background = "#1a0f18cc"
+foreground = "#ffffff"
+frame_color = "#ff2e63"
+timeout = 0

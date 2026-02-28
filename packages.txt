@@ -1,0 +1,120 @@
+# Hyprland - compositeur Wayland
+hyprland
+
+# Barre de statut
+waybar
+
+# Notifications
+dunst
+
+# Lanceur d'applications (Wayland)
+rofi-wayland
+
+# Terminaux
+alacritty
+kitty
+
+# Gestionnaire de fichiers
+dolphin
+
+# Réseau (applet systray)
+network-manager-applet
+
+# Audio
+wireplumber
+pavucontrol
+
+# Luminosité / Media
+brightnessctl
+playerctl
+
+# Profils d'énergie
+power-profiles-daemon
+
+# Thème Qt
+qt6ct
+
+# Police
+ttf-jetbrains-mono-nerd
+
+# Icônes
+papirus-icon-theme
+
+# Shell
+zsh
+zsh-completions
+zsh-syntax-highlighting
+
+# Conteneurs
+docker
+docker-compose
+
+# Éditeur
+zed
+
+# Flatpak (pour Zen Browser)
+flatpak
+
+# Git
+git
+github-cli
+lazygit
+
+# Langages / Runtimes
+nodejs-lts-jod
+npm
+bun
+ruby
+
+# Base de données
+sqlite
+
+# Outils CLI
+fzf
+ripgrep
+fd
+bat
+eza
+jq
+tree
+htop
+btop
+fastfetch
+curl
+wget
+httpie
+openssh
+strace
+
+# Compilation (dépendances natives npm)
+make
+cmake
+gcc
+
+# Screenshots Wayland
+grim
+slurp
+swappy
+wl-clipboard
+
+# Archives
+unzip
+zip
+p7zip
+
+# Système / Desktop
+gvfs
+ntfs-3g
+xdg-utils
+xdg-user-dirs
+man-db
+man-pages
+
+# Polices
+noto-fonts
+noto-fonts-emoji
+otf-font-awesome
+
+# Média
+mpv
+gimp
