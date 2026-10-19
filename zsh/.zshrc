@@ -139,3 +139,14 @@ export PATH=/home/anarion/.opencode/bin:$PATH
 export ANDROID_HOME=/opt/android-sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/home/anarion/.cargo/bin
+
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=$DEVKITPRO/devkitARM
+export PATH=$DEVKITPRO/tools/bin:$PATH
+
+# Android/Gradle nécessite JDK 17+
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# Secrets (tokens, clés) — hors dépôt, non versionné.
+[[ -f ~/.config/zsh/secrets.zsh ]] && source ~/.config/zsh/secrets.zsh
