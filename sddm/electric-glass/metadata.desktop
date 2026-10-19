@@ -1,0 +1,13 @@
+[SddmGreeterTheme]
+Name=Electric Glass
+Description=Thème SDDM QtQuick pur — glassmorphism cyan, aucune dépendance KDE
+Author=Anarion
+Copyright=(c) 2026, Anarion
+License=MIT
+Type=sddm-theme
+Version=1.0
+Theme-Id=electric-glass
+Theme-API=2.0
+MainScript=Main.qml
+ConfigFile=theme.conf
+QtVersion=6

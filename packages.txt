@@ -31,6 +31,9 @@ playerctl
 # Profils d'énergie
 power-profiles-daemon
 
+# Gestionnaire de connexion (thème Electric Glass dans sddm/)
+sddm
+
 # Thème Qt
 qt6ct
 
@@ -118,3 +121,9 @@ otf-font-awesome
 # Média
 mpv
 gimp
+
+# Déploiement du thème SDDM
+rsync
+
+# Boucle de rechargement pour test-theme.sh
+inotify-tools

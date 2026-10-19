@@ -132,6 +132,16 @@ for src in "${!LINKS[@]}"; do
     ((created++)) || true
 done
 
+# ---------- 4b. Thème SDDM ----------
+# Pas un symlink : le greeter tourne sous l'utilisateur `sddm`, qui ne peut pas
+# traverser $HOME (0700). Le thème est donc copié en root par son propre script.
+if [[ -x "$DOTFILES_DIR/sddm/install-sddm.sh" ]]; then
+    info "Installation du thème SDDM Electric Glass..."
+    sudo "$DOTFILES_DIR/sddm/install-sddm.sh"
+else
+    warn "sddm/install-sddm.sh introuvable, thème SDDM ignoré."
+fi
+
 # ---------- 5. Résumé ----------
 echo ""
 echo -e "${CYAN}══════════════════════════════════════${NC}"

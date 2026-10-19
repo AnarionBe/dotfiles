@@ -12,6 +12,7 @@ Dotfiles pour Arch Linux + Hyprland avec un thème glassmorphism cyan/bleu elect
 | Lanceur | Rofi (Wayland) |
 | Terminaux | Alacritty, Kitty |
 | Editeur | Zed (theme ElectricGlass) |
+| Connexion | SDDM (theme Electric Glass) |
 | Navigateur | Zen Browser (Flatpak) |
 | Shell | Zsh + Oh My Zsh + Powerlevel10k |
 | Police | JetBrains Mono Nerd Font |
@@ -42,9 +43,14 @@ dotfiles/
 │   ├── settings.json
 │   └── themes/
 │       └── electric-glass.json
-└── zsh/                  # ~/
-    ├── .zshrc
-    └── .p10k.zsh
+├── zsh/                  # ~/
+│   ├── .zshrc
+│   └── .p10k.zsh
+└── sddm/                 # /usr/share/sddm/themes/ (COPIE root, pas un symlink)
+    ├── install-sddm.sh   # déploiement + garde-fous
+    ├── test-theme.sh     # greeter de test, sans sudo ni redémarrage
+    ├── 20-electric-glass.conf
+    └── electric-glass/   # le thème QML (QtQuick pur, zéro dépendance KDE)
 ```
 
 ## Installation
