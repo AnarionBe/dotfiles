@@ -78,6 +78,23 @@ listview {
     background-color: transparent;
     spacing: 6px;
     margin: 6px 0 0 0;
+
+    /* La fenêtre se cale sur le nombre d'entrées ; au-delà de `lines`
+       elle garde cette hauteur et la liste défile. */
+    lines: 15;
+    fixed-height: false;
+    scrollbar: true;
+}
+
+/* Rofi dessine la barre même quand tout tient : on la garde discrète,
+   elle ne doit se remarquer que lorsqu'elle est courte. */
+scrollbar {
+    width: 3px;
+    handle-width: 3px;
+    handle-color: rgba(122,162,247,0.45);
+    background-color: transparent;
+    border-radius: 3px;
+    margin: 0 0 0 10px;
 }
 
 element {
