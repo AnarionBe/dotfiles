@@ -161,14 +161,25 @@
       "power-saver": "",
     },
   },
+  // Élément réseau unique : nom + qualité du lien, clic = menu rofi.
+  // Remplace aussi l'icône systray de nm-applet, qui faisait doublon.
   "network": {
-    // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "interval": 5,
+    "format-wifi": "{icon}  {essid} {signalStrength}%",
+    "format-ethernet": "󰚩  {ifname}",
+    "format-linked": "󰚩  {ifname} (sans IP)",
+    "format-disconnected": "󰤮  Hors ligne",
+    "format-icons": [
+      "󰤯",
+      "󰤢",
+      "󰤥",
+      "󰤨",
+    ],
+    "tooltip-format-wifi": "{essid} — {signalStrength}% ({frequency} GHz)\n{ipaddr}/{cidr} via {gwaddr}\n↓ {bandwidthDownBytes}/s   ↑ {bandwidthUpBytes}/s",
+    "tooltip-format-ethernet": "{ifname}\n{ipaddr}/{cidr} via {gwaddr}\n↓ {bandwidthDownBytes}/s   ↑ {bandwidthUpBytes}/s",
+    "tooltip-format-disconnected": "Aucune connexion",
+    "on-click": "$HOME/.config/waybar/scripts/network_menu.sh",
+    "on-click-right": "nm-connection-editor",
   },
   "pulseaudio": {
     // "scroll-step": 1, // %, can be a float

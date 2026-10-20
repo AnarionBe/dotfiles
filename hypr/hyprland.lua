@@ -35,7 +35,8 @@ hl.on("hyprland.start", function()
     -- Intégration systemd : active graphical-session.target, requise par xdg-desktop-portal >= 1.22
     hl.exec_cmd("systemctl --user import-environment WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE && dbus-update-activation-environment --systemd WAYLAND_DISPLAY DISPLAY XDG_CURRENT_DESKTOP HYPRLAND_INSTANCE_SIGNATURE && systemctl --user start hyprland-session.target")
     hl.exec_cmd("waybar")
-    hl.exec_cmd("nm-applet")
+    -- nm-applet retiré : son icône systray faisait doublon avec le module
+    -- network de waybar (clic = menu rofi, voir waybar/scripts/network_menu.sh)
     hl.exec_cmd("dunst")
 end)
 
