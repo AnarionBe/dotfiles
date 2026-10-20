@@ -2,7 +2,7 @@
 {
   // "layer": "top", // Waybar at top layer
   // "position": "bottom", // Waybar position (top|bottom|left|right)
-  "height": 30, // Waybar height (to be removed for auto height)
+  "height": 40, // hauteur minimale imposée par les modules (glyphes Nerd Font)
   // "width": 1280, // Waybar width
   "spacing": 4, // Gaps between modules (4px)
   // Choose the order of the modules
@@ -10,12 +10,11 @@
     "hyprland/workspaces",
     "hyprland/mode",
     "hyprland/scratchpad",
-    "custom/media",
+    "group/media",
   ],
   "modules-center": ["hyprland/window"],
   "modules-right": [
     "custom/docker",
-    "mpd",
     "idle_inhibitor",
     "pulseaudio",
     "network",
@@ -190,17 +189,44 @@
     },
     "on-click": "pavucontrol",
   },
+  // Lecteur média (MPRIS via playerctl) : titre + contrôles.
+  // Le groupe entier disparaît quand aucun lecteur n'est actif.
+  "group/media": {
+    "orientation": "horizontal",
+    "modules": [
+      "custom/media",
+      "custom/media-prev",
+      "custom/media-play",
+      "custom/media-next",
+    ],
+  },
   "custom/media": {
-    "format": "{icon} {text}",
     "return-type": "json",
-    "max-length": 40,
-    "format-icons": {
-      "spotify": "",
-      "default": "🎜",
-    },
-    "escape": true,
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources folder
-    // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    "format": "{}",
+    "exec": "stdbuf -oL $HOME/.config/waybar/scripts/mediaplayer.sh info",
+    "on-click": "playerctl play-pause",
+    "on-click-middle": "playerctl previous",
+    "on-click-right": "playerctl next",
+    "on-scroll-up": "playerctl position 5+",
+    "on-scroll-down": "playerctl position 5-",
+  },
+  "custom/media-prev": {
+    "return-type": "json",
+    "format": "{}",
+    "exec": "stdbuf -oL $HOME/.config/waybar/scripts/mediaplayer.sh prev",
+    "on-click": "playerctl previous",
+  },
+  "custom/media-play": {
+    "return-type": "json",
+    "format": "{}",
+    "exec": "stdbuf -oL $HOME/.config/waybar/scripts/mediaplayer.sh toggle",
+    "on-click": "playerctl play-pause",
+  },
+  "custom/media-next": {
+    "return-type": "json",
+    "format": "{}",
+    "exec": "stdbuf -oL $HOME/.config/waybar/scripts/mediaplayer.sh next",
+    "on-click": "playerctl next",
   },
   "custom/power": {
     "format": "⏻ ",
@@ -208,10 +234,11 @@
     "menu": "on-click",
     "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
     "menu-actions": {
-      "shutdown": "shutdown",
-      "reboot": "reboot",
+      "logout": "hyprctl dispatch exit",
       "suspend": "systemctl suspend",
       "hibernate": "systemctl hibernate",
+      "reboot": "systemctl reboot",
+      "shutdown": "systemctl poweroff",
     },
     "custom/docker": {
       "format": "{}",

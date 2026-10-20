@@ -14,7 +14,27 @@ window#waybar {
 .modules-center,
 .modules-right {
     background: rgba(16, 26, 46, 0); /* FULL TRANSPARENT */
-    margin: 6px;
+    margin: 4px 6px;
+}
+
+/* Les glyphes Nerd Font débordent de la boîte de texte :
+   sans padding vertical ils sont rognés en haut. */
+#idle_inhibitor,
+#pulseaudio,
+#network,
+#power-profiles-daemon,
+#cpu,
+#memory,
+#temperature,
+#backlight,
+#keyboard-state,
+#battery,
+#clock,
+#tray,
+#custom-power,
+#custom-docker {
+    padding: 3px 8px;
+    margin: 0 1px;
 }
 
 #workspaces button {
@@ -29,4 +49,37 @@ window#waybar {
 #workspaces button.active {
     background: rgba(0, 234, 255, 0.25);
     box-shadow: 0 0 12px #00eaff;
+}
+
+/* ---- Lecteur média ---- */
+#custom-media,
+#custom-media-prev,
+#custom-media-play,
+#custom-media-next {
+    background: rgba(16, 26, 46, 0.6);
+    border-radius: 10px;
+    padding: 4px 10px;
+    margin: 0 2px;
+    transition: all 0.15s ease-in-out;
+}
+
+#custom-media.playing {
+    color: #00eaff;
+    box-shadow: 0 0 12px rgba(0, 234, 255, 0.35);
+}
+
+#custom-media.paused {
+    color: #8b95b5;
+}
+
+/* Boutons dépliés au survol */
+.media-ctl {
+    color: #e6f1ff;
+}
+
+#custom-media-prev:hover,
+#custom-media-play:hover,
+#custom-media-next:hover {
+    background: rgba(0, 234, 255, 0.25);
+    color: #00eaff;
 }
