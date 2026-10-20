@@ -239,18 +239,11 @@
     "exec": "stdbuf -oL $HOME/.config/waybar/scripts/mediaplayer.sh next",
     "on-click": "playerctl next",
   },
+  // Menu d'alimentation : même principe que le réseau, un script rofi.
   "custom/power": {
-    "format": "⏻ ",
-    "tooltip": true,
-    "menu": "on-click",
-    "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-    "menu-actions": {
-      "logout": "hyprctl dispatch exit",
-      "suspend": "systemctl suspend",
-      "hibernate": "systemctl hibernate",
-      "reboot": "systemctl reboot",
-      "shutdown": "systemctl poweroff",
-    },
+    "format": "",
+    "tooltip-format": "Alimentation",
+    "on-click": "$HOME/.config/waybar/scripts/power_menu.sh",
     "custom/docker": {
       "format": "{}",
       "return-type": "json",
