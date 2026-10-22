@@ -25,7 +25,7 @@ actions=(suspend hibernate logout reboot shutdown)
 declare -A commands=(
     [suspend]="systemctl suspend"
     [hibernate]="systemctl hibernate"
-    [logout]="hyprctl dispatch exit"
+    [logout]="hyprctl dispatch hl.dsp.exit()"   # syntaxe Lua depuis Hyprland 0.56
     [reboot]="systemctl reboot"
     [shutdown]="systemctl poweroff"
 )
